@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  id: ID!
+  brand: String!
+  year: Int!
+  price: Int!
+  color: String!
+}
+
+type Query {
+  getAllCars: [Car!]!
+  getCarById(id: Int!): Car!
+}
+
+type Mutation {
+  createCar(createCarDto: CreateCarDto!): Car!
+  updateCar(updateCarDto: UpdateCarDto!): Car!
+  deleteCar(id: Int!): Car!
+}
+
+input CreateCarDto {
+  brand: String!
+  price: Int!
+  color: String!
+  year: Int!
+}
+
+input UpdateCarDto {
+  brand: String
+  price: Int
+  color: String
+  year: Int
+  id: Int!
+}
